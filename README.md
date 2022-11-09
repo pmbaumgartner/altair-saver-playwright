@@ -31,11 +31,10 @@ chart = alt.Chart(source).mark_bar().encode(x="a", y="b")
 save(chart, "mycoolchart.svg")
 ```
 
-**In a notebook?**
+**In a notebook?** Use the async API. ([Related info](https://github.com/microsoft/playwright-python/issues/480))
 
-```
-from altair_saver_playwright import save_async
-import asyncio
+```python
+from altair_saver_playwright import save_async  # Note new function name here
 
 import altair as alt
 import pandas as pd
@@ -49,7 +48,8 @@ source = pd.DataFrame(
 
 chart = alt.Chart(source).mark_bar().encode(x="a", y="b")
 
-asyncio.run(save_async(chart, "mycoolchart.svg"))
+# Don't forget the await here
+await save_async(chart, "mycoolchart.svg")
 ```
 
 ## What is this doing?
