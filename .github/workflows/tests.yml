@@ -34,5 +34,5 @@ jobs:
       - run: poetry install --no-interaction --no-root
         if: steps.cache-deps.outputs.cache-hit != 'true'
       - run: poetry install --no-interaction
-      - run: playwright install chromium
+      - run: poetry run playwright install chromium
       - run: poetry run pytest -v
