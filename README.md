@@ -1,5 +1,8 @@
 # Altair Saver - Playwright
 
+> **Note**
+> You should use [`vl-convert`](https://github.com/vega/vl-convert) instead of this, as it requires no additional dependencies and is pip installable. It will become the default export engine in Altair 5 as well.
+
 [Installing the requirements](https://github.com/altair-viz/altair_saver#additional-requirements) for `altair_saver` correctly is annoying. This library makes it much easier if you want `png` or `svg` output for `altair` plots.
 
 ## Install
